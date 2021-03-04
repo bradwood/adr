@@ -71,21 +71,16 @@ func initConfig(baseDir string) {
 func initTemplate() {
 	body := []byte(`
 # {{.Number}}. {{.Title}}
-======
 Date: {{.Date}}
 
 ## Status
-======
 {{.Status}}
 
 ## Context
-======
 
 ## Decision
-======
 
 ## Consequences
-======
 
 `)
 
@@ -119,7 +114,7 @@ func newAdr(config AdrConfig, adrName []string) {
 		Title:  strings.Join(adrName, " "),
 		Date:   time.Now().Format("02-01-2006 15:04:05"),
 		Number: config.CurrentAdr,
-		Status: PROPOSED,
+		Status: ACCEPTED,
 	}
 	template, err := template.ParseFiles(adrTemplateFilePath)
 	if err != nil {
