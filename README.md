@@ -1,3 +1,4 @@
+
 [![Build Status](https://travis-ci.com/marouni/adr.svg?branch=master)](https://travis-ci.com/marouni/adr)
 
 # ADR Go
